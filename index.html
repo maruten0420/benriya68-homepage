@@ -2,90 +2,74 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="便利屋68公式サイト" />
-  <meta http-equiv="content-style-type" content="text/css" />
-  <meta http-equiv="content-script-type" content="text/javascript" />
-  <meta name="format-detection" content="telephone=no">
   <title>便利屋68</title>
-  <link rel="stylesheet" href="style.css" media="all" />
+  <link rel="stylesheet" href="style.css">
   <script>
-    document.oncontextmenu = function () { alert("右クリック禁止"); return false; }
+    document.oncontextmenu = function() { alert("右クリック禁止"); return false; };
     function select_menu() {
       const menu = document.getElementsByName('menu');
-      document.getElementById('section_1').style.display = menu[0].checked ? "" : "none";
-      document.getElementById('section_2').style.display = menu[1].checked ? "" : "none";
-      document.getElementById('section_3').style.display = menu[2].checked ? "" : "none";
-      document.getElementById('section_4').style.display = menu[3].checked ? "" : "none";
+      const sections = ['section_1', 'section_2', 'section_3', 'section_4'];
+      sections.forEach((id, idx) => {
+        document.getElementById(id).style.display = menu[idx].checked ? "" : "none";
+      });
     }
     window.addEventListener('load', select_menu);
   </script>
 </head>
 
 <body>
-  <div id="container_wrap">
-    <header class="header">
-      <nav id="gnavi">
-        <ul>
-          <li><input id="block-01" type="radio" name="menu" class="toggle" onclick="select_menu()" checked>
-            <label class="Label" for="block-01">メインページ</label></li>
-          <li><input id="block-02" type="radio" name="menu" class="toggle" onclick="select_menu()">
-            <label class="Label" for="block-02">お知らせ</label></li>
-          <li><input id="block-03" type="radio" name="menu" class="toggle" onclick="select_menu()">
-            <label class="Label" for="block-03">依頼について</label></li>
-          <li><input id="block-04" type="radio" name="menu" class="toggle" onclick="select_menu()">
-            <label class="Label" for="block-04">アクセス</label></li>
-        </ul>
-      </nav>
-    </header>
+<div id="container_wrap">
+  <header class="header">
+    <nav id="gnavi">
+      <ul>
+        <li><input id="block-01" type="radio" name="menu" class="toggle" onclick="select_menu()" checked>
+          <label class="Label" for="block-01">メインページ</label></li>
+        <li><input id="block-02" type="radio" name="menu" class="toggle" onclick="select_menu()">
+          <label class="Label" for="block-02">お知らせ</label></li>
+        <li><input id="block-03" type="radio" name="menu" class="toggle" onclick="select_menu()">
+          <label class="Label" for="block-03">依頼について</label></li>
+        <li><input id="block-04" type="radio" name="menu" class="toggle" onclick="select_menu()">
+          <label class="Label" for="block-04">アクセス</label></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="contents">
-      <!-- メインページ -->
-      <section id="section_1">
-        <h1 class="main_ttl niji m50">
-          <span>便</span><span>利</span><span>屋</span><span>6</span><span>8</span>
-        </h1>
+  <div class="contents">
+    <!-- メインページ -->
+    <section id="section_1">
+      <h1 class="main_ttl niji"><span>便</span><span>利</span><span>屋</span><span>6</span><span>8</span></h1> 
+      <p class="counter m30">あなたは<img src="https://drive.google.com/uc?export=view&id=1gDaMm91u5H1snP05CvKGzccz6fFO31ly" alt="アクセスカウンター画像">人目のお客様です</p>
+      <div class="text_attention m30">
+        <p>↓依頼はこちらから↓</p>
+      </div>
+      <a href="" class="bbs">掲示板</a>
+      <p class="blink attention">右から左に移動中</p>
+      <div class="text_attention m50">
+        <p>↓バナーリンク↓</p>
+      </div>
+      <ul class="list_banner">
+        <li><a href="" class="banner1">ゲヘナ学園ホームページ</a></li>
+      </ul>
+    </section>
 
-        <p class="counter m30">あなたは
-          <img src="https://drive.google.com/uc?export=view&id=1gDaMm91u5H1snP05CvKGzccz6fFO31ly" alt="アクセスカウンター画像">
-          人目のお客様です
-        </p>
+    <!-- お知らせ -->
+    <section id="section_2" style="display:none;">
+      <h2 class="main_ttl m50">お知らせ</h2>
+      <p>準備中です。</p>
+    </section>
 
-        <div class="m30">
-          <div class="text_attention">
-            <p>↓依頼はこちらから↓</p>
-          </div>
-          <a href="#" class="bbs">掲示板</a>
-          <p class="blink attention">踏み逃げ禁止</p>
-        </div>
+    <!-- 依頼について -->
+    <section id="section_3" style="display:none;">
+      <h2 class="main_ttl m50">依頼について</h2>
+      <p>準備中です。</p>
+    </section>
 
-        <div class="text_attention m30">
-          <p>↓バナーリンク↓</p>
-        </div>
-        <ul class="list_banner">
-          <li>
-            <a href="#" class="banner1">ゲヘナ学園<br>ホームページ</a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- お知らせ -->
-      <section id="section_2">
-        <h2 class="main_ttl m50">お知らせ</h2>
-        <p class="txt_b">現在準備中です。</p>
-      </section>
-
-      <!-- 依頼について -->
-      <section id="section_3">
-        <h2 class="main_ttl m50">依頼について</h2>
-        <p class="txt_b">準備中です。</p>
-      </section>
-
-      <!-- アクセス -->
-      <section id="section_4">
-        <h2 class="main_ttl m50">アクセス</h2>
-        <p class="txt_b">現在地図を作成中です。</p>
-      </section>
-    </div>
+    <!-- アクセス -->
+    <section id="section_4" style="display:none;">
+      <h2 class="main_ttl m50">アクセス</h2>
+      <p>準備中です。</p>
+    </section>
   </div>
+</div>
 </body>
 </html>
