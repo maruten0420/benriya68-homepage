@@ -1,0 +1,82 @@
+body {
+  background-color: #ffffcc;
+  color: #000;
+  font-family: "MS PGothic", "Osaka", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("bg_tile.gif"); /* 任意でタイル画像を追加 */
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  border: 2px double #000;
+  padding: 10px;
+  background-color: #fff;
+}
+
+header h1.rainbow {
+  font-size: 36px;
+  text-align: center;
+  animation: rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  16% { color: orange; }
+  33% { color: yellow; }
+  50% { color: green; }
+  66% { color: blue; }
+  83% { color: indigo; }
+  100% { color: violet; }
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  background-color: #c0c0c0;
+  border: 2px outset #999;
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000080;
+  font-weight: bold;
+}
+
+.counter {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.marquee-box {
+  background-color: #ffccff;
+  border: 2px dashed #ff00ff;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.marquee-box a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff0000;
+}
+
+.banner {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px dotted #000;
+  padding-top: 10px;
+}
