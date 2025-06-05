@@ -344,3 +344,12 @@ a:link, a:active, a:visited {
   text-shadow: 1px 1px 0 white, 2px 2px 0 hotpink;
 }
 
+/* お知らせで飛び出すテキスト */
+.breakout {
+  display: inline-block;
+  position: relative;
+  right: -50px; /* 右にはみ出す */
+  white-space: nowrap;
+  font-weight: bold;
+  color: darkred;
+}
