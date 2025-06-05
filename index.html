@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="description" content="便利屋68公式サイト" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta name="format-detection" content="telephone=no">
   <title>便利屋68</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" media="all" />
+  <script>
+    document.oncontextmenu = function () { alert("右クリック禁止"); return false; }
+    function select_menu() {
+      const menu = document.getElementsByName('menu');
+      document.getElementById('section_1').style.display = menu[0].checked ? "" : "none";
+      document.getElementById('section_2').style.display = menu[1].checked ? "" : "none";
+      document.getElementById('section_3').style.display = menu[2].checked ? "" : "none";
+      document.getElementById('section_4').style.display = menu[3].checked ? "" : "none";
+    }
+    window.addEventListener('load', select_menu);
+  </script>
 </head>
-<body>
-  <div class="container">
 
-    <header>
-      <h1 class="rainbow">便利屋68</h1>
+<body>
+  <div id="container_wrap">
+    <header class="header">
+      <nav id="gnavi">
+        <ul>
+          <li><input id="block-01" type="radio" name="menu" class="toggle" onclick="select_menu()" checked>
+            <label class="Label" for="block-01">メインページ</label></li>
+          <li><input id="block-02" type="radio" name="menu" class="toggle" onclick="select_menu()">
+            <label class="Label" for="block-02">お知らせ</label></li>
+          <li><input id="block-03" type="radio" name="menu" class="toggle" onclick="select_menu()">
+            <label class="Label" for="block-03">依頼について</label></li>
+          <li><input id="block-04" type="radio" name="menu" class="toggle" onclick="select_menu()">
+            <label class="Label" for="block-04">アクセス</label></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#">メインページ</a></li>
-        <li><a href="#">お知らせ</a></li>
-        <li><a href="#">依頼について</a></li>
-        <li><a href="#">アクセス</a></li>
-      </ul>
-    </nav>
+    <div class="contents">
+      <!-- メインページ -->
+      <section id="section_1">
+        <h1 class="main_ttl niji m50">
+          <span>便</span><span>利</span><span>屋</span><span>6</span><span>8</span>
+        </h1>
 
-    <main>
-      <p class="counter">あなたは <span>68</span> 人目のお客様です！</p>
+        <p class="counter m30">あなたは
+          <img src="https://drive.google.com/uc?export=view&id=1gDaMm91u5H1snP05CvKGzccz6fFO31ly" alt="アクセスカウンター画像">
+          人目のお客様です
+        </p>
 
-      <div class="marquee-box">
-        <marquee behavior="scroll" direction="right" scrollamount="5">
-          <a href="#">依頼はこちらから → 掲示板</a>
-        </marquee>
-      </div>
+        <div class="m30">
+          <div class="text_attention">
+            <p>↓依頼はこちらから↓</p>
+          </div>
+          <a href="#" class="bbs">掲示板</a>
+          <p class="blink attention">踏み逃げ禁止</p>
+        </div>
 
-      <div class="banner">
-        <img src="gehena_banner.png" alt="ゲヘナ学園ホームページ">
-      </div>
-    </main>
+        <div class="text_attention m30">
+          <p>↓バナーリンク↓</p>
+        </div>
+        <ul class="list_banner">
+          <li>
+            <a href="#" class="banner1">ゲヘナ学園<br>ホームページ</a>
+          </li>
+        </ul>
+      </section>
 
-    <footer>
-      <p>© 2025 Benriya68. All rights reserved.</p>
-    </footer>
+      <!-- お知らせ -->
+      <section id="section_2">
+        <h2 class="main_ttl m50">お知らせ</h2>
+        <p class="txt_b">現在準備中です。</p>
+      </section>
 
+      <!-- 依頼について -->
+      <section id="section_3">
+        <h2 class="main_ttl m50">依頼について</h2>
+        <p class="txt_b">準備中です。</p>
+      </section>
+
+      <!-- アクセス -->
+      <section id="section_4">
+        <h2 class="main_ttl m50">アクセス</h2>
+        <p class="txt_b">現在地図を作成中です。</p>
+      </section>
+    </div>
   </div>
 </body>
 </html>
