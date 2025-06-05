@@ -1,82 +1,145 @@
+/* 全体の基本スタイル */
 body {
-  background-color: #ffffcc;
-  color: #000;
-  font-family: "MS PGothic", "Osaka", sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-family: "ＭＳ Ｐゴシック", "Osaka－等幅", monospace;
   margin: 0;
   padding: 0;
-  background-image: url("bg_tile.gif"); /* 任意でタイル画像を追加 */
 }
 
-.container {
-  width: 800px;
+/* コンテナラップ */
+#container_wrap {
+  width: 90%;
+  max-width: 960px;
   margin: 0 auto;
-  border: 2px double #000;
-  padding: 10px;
-  background-color: #fff;
+  padding: 1em;
 }
 
-header h1.rainbow {
-  font-size: 36px;
-  text-align: center;
-  animation: rainbow 5s infinite linear;
+/* ヘッダーとメニュー */
+header {
+  margin-bottom: 1.5em;
 }
-
-@keyframes rainbow {
-  0% { color: red; }
-  16% { color: orange; }
-  33% { color: yellow; }
-  50% { color: green; }
-  66% { color: blue; }
-  83% { color: indigo; }
-  100% { color: violet; }
-}
-
-nav ul {
+#gnavi ul {
+  list-style: none;
   display: flex;
   justify-content: space-around;
-  list-style: none;
   padding: 0;
-  background-color: #c0c0c0;
-  border: 2px outset #999;
+  margin: 0;
+  border-bottom: 2px solid #fff;
 }
-
-nav ul li a {
+#gnavi li {
+  margin: 0;
+}
+.toggle {
+  display: none;
+}
+.Label {
   display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #000080;
-  font-weight: bold;
+  padding: 0.5em 1em;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+.Label:hover {
+  background: #444;
 }
 
+/* 虹色タイトル */
+.niji span:nth-child(1) { color: red; }
+.niji span:nth-child(2) { color: orange; }
+.niji span:nth-child(3) { color: yellow; }
+.niji span:nth-child(4) { color: lime; }
+.niji span:nth-child(5) { color: cyan; }
+.niji {
+  font-size: 2em;
+  text-align: center;
+}
+
+/* アクセスカウンター */
 .counter {
-  font-size: 18px;
   text-align: center;
-  margin: 20px 0;
+  font-size: 1.2em;
+}
+.counter img {
+  vertical-align: middle;
+  height: 1.2em;
 }
 
-.marquee-box {
-  background-color: #ffccff;
-  border: 2px dashed #ff00ff;
-  padding: 10px;
-  margin: 20px auto;
-  text-align: center;
+/* 横スクロール注意文 */
+.text_attention {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  padding: 0.5em;
+  background: #111;
+  color: #ff0;
+  animation: scroll-text 10s linear infinite;
+}
+@keyframes scroll-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
-.marquee-box a {
+/* ブリンクアニメーション（踏み逃げ禁止） */
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.attention {
+  color: red;
   font-weight: bold;
+  text-align: center;
+}
+
+/* バナーリンク */
+.list_banner {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.list_banner li {
+  display: inline-block;
+  margin: 0.5em;
+}
+.list_banner a {
+  display: inline-block;
+  background-color: #003366;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: 2px solid #ccc;
+  border-radius: 5px;
   text-decoration: none;
-  color: #ff0000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.list_banner a:hover {
+  background-color: #336699;
 }
 
-.banner {
+/* 通常テキストの太字 */
+.txt_b {
+  font-weight: bold;
   text-align: center;
-  margin-top: 30px;
 }
 
-footer {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 40px;
-  border-top: 1px dotted #000;
-  padding-top: 10px;
+/* スペース調整 */
+.m30 {
+  margin-bottom: 30px;
+}
+.m50 {
+  margin-bottom: 50px;
+}
+
+/* 各セクションの非表示制御（初期はCSSでは制御しない） */
+section {
+  display: none;
+}
+#section_1 {
+  display: block;
 }
