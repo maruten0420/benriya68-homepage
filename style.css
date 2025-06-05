@@ -348,7 +348,7 @@ a:link, a:active, a:visited {
 .breakout {
   display: inline-block;
   position: relative;
-  right: -30px; /* 右にはみ出す */
+  right: -0px; /* 右にはみ出す */
   white-space: nowrap;
   font-weight: bold;
 }
