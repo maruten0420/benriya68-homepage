@@ -308,3 +308,39 @@ a:link, a:active, a:visited {
     position: relative;
     z-index: 1;
 }
+
+/* 1. 「便利屋68」の文字サイズを大きく */
+.main_ttl {
+  font-size: 3rem;
+}
+
+/* 2. 右から移動していたテキストを固定表示に変更 */
+.text_attention p {
+  animation: none !important;
+  padding-left: 0 !important;
+  white-space: normal !important;
+  display: block !important;
+  text-align: center;
+}
+
+/* 3. バナー中央ぞろえ */
+.list_banner {
+  justify-content: center !important;
+  gap: 20px;
+}
+
+/* 4. お知らせ左寄せ＆幅制限 */
+.big_notice {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+/* 5. 「68人目のお客様」部分を目立たせる */
+.counter strong {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 hotpink;
+}
+
