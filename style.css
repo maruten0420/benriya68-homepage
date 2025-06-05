@@ -61,10 +61,6 @@ a:link, a:active, a:visited {
     background-color: aqua;
     text-align: center;
     position: relative;
-    background-image: url('ichinichi.png');
-      background-size: cover;
-      background-repeat: repeat;
-      background-attachment: fixed;
 }
 
 
@@ -280,4 +276,35 @@ a:link, a:active, a:visited {
   padding: 10px;
   border: 2px dashed hotpink;
   margin: 20px 0;
+}
+
+/* ichinichi.pngを等倍・25%透明で背景に表示（白背景） */
+#container_wrap .contents {
+    background-color: white; /* 背景を白に */
+    text-align: center;
+    position: relative;
+    background-image: none !important; /* 元の背景画像設定を無効化 */
+}
+
+/* 背景画像を透明度25%でループ表示 */
+#container_wrap .contents::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ichinichi.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: top left;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 中身を上に表示 */
+#container_wrap .contents > * {
+    position: relative;
+    z-index: 1;
 }
