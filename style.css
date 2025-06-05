@@ -61,8 +61,10 @@ a:link, a:active, a:visited {
     background-color: aqua;
     text-align: center;
     position: relative;
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><path fill="%23ffffff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>');
-    background-size: 30px 30px;
+    background-image: url('ichinichi.png');
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
 }
 
 
@@ -167,13 +169,10 @@ a:link, a:active, a:visited {
 }
 
 
-.text_attention{
-    margin : auto;
-    width : 100%;
-    font-size : 1.25rem;
-    font-weight: 800;
-    text-align : center;
-    overflow : hidden;
+.text_attention {
+  font-size: 1rem;
+  color: hotpink;
+  text-align: center;
 }
 .text_attention p{
     margin:0;
@@ -271,4 +270,14 @@ a:link, a:active, a:visited {
   font-size: 1.25rem;
   font-weight: 800;
   font-style: italic;
+}
+
+/* お知らせを大きめに */
+.big_notice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px;
+  border: 2px dashed hotpink;
+  margin: 20px 0;
 }
