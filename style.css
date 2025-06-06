@@ -52,7 +52,7 @@ a:link, a:active, a:visited {
     width: 25%;
     height: 100%;
     position: relative;
-    background-color: aqua;
+    background-color: #ffe0e0;
     border-right: double 5px grey;
 }
 #container_wrap .contents{
