@@ -354,3 +354,38 @@ a:link, a:active, a:visited {
   white-space: nowrap;
   font-weight: bold;
 }
+
+/* ▼業務日誌リンクセクション（平成風） */
+.nisshi_section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nisshi_text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: deeppink;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 hotpink;
+  margin-bottom: 1rem;
+}
+
+.nisshi_button {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(to bottom, #ffccff, #ff66cc);
+  border: 2px outset hotpink;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-family: "ＭＳ Ｐゴシック", "メイリオ", sans-serif;
+  transition: transform 0.1s;
+}
+
+.nisshi_button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, #ff99dd, #ff33aa);
+}
+
